@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Rb-Y3-k3s">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="tXn-2r-Dy6">
+            <objects>
+                <viewController id="sU2-bd-aFQ" customClass="ViewController" customModule="JQWebViewSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8EI-ja-ZkO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ie7-Sr-WPS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EOr-Me-M39">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26W-mm-W78">
+                                <rect key="frame" x="114.5" y="373" width="185" height="30"/>
+                                <state key="normal" title="showJQWebViewController"/>
+                                <connections>
+                                    <action selector="showWebViewAction:" destination="sU2-bd-aFQ" eventType="touchUpInside" id="viS-OC-Q7I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo2-Tw-RnQ">
+                                <rect key="frame" x="97" y="453" width="220" height="30"/>
+                                <state key="normal" title="showCustomWebViewController"/>
+                                <connections>
+                                    <action selector="showCustomController:" destination="sU2-bd-aFQ" eventType="touchUpInside" id="J1Z-Ts-BSv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="26W-mm-W78" firstAttribute="centerX" secondItem="EOr-Me-M39" secondAttribute="centerX" id="IYR-aZ-qfs"/>
+                            <constraint firstItem="xo2-Tw-RnQ" firstAttribute="top" secondItem="26W-mm-W78" secondAttribute="bottom" constant="50" id="OKh-ph-l2K"/>
+                            <constraint firstItem="xo2-Tw-RnQ" firstAttribute="centerX" secondItem="EOr-Me-M39" secondAttribute="centerX" id="R1I-v2-8JY"/>
+                            <constraint firstItem="26W-mm-W78" firstAttribute="centerY" secondItem="EOr-Me-M39" secondAttribute="centerY" constant="-60" id="ldf-eK-wpv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xtX-0r-LzF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="qxr-0g-wXl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iP0-Qk-dBy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="202"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VmB-eJ-l86">
+            <objects>
+                <navigationController id="6Rb-Y3-k3s" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0i-g8-zNG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sU2-bd-aFQ" kind="relationship" relationship="rootViewController" id="bJq-J4-8cn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vgb-IX-wju" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-951" y="202"/>
+        </scene>
+    </scenes>
+</document>
